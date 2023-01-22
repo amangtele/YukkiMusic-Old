@@ -34,7 +34,7 @@ pstart_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to a Group ➕", url="https://t.me/vcgstream_bot?startgroup=true")
+                        "➕ Add me to a Group ➕", url="https://t.me/RebelsMusic_Bot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
                         "📚 Commands", url="https://telegra.ph/Veez-Mega-Bot-09-30"),
@@ -57,7 +57,7 @@ welcome_captcha_group = 2
 async def welcome(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"❌ **not in allowed chat**\n\nrebeles is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)
     for member in message.new_chat_members:
         try:
@@ -79,7 +79,7 @@ async def start(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
         await message.reply_text(f"❌ **not in allowed chat**\n\nstrea is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
-        return await app.leave_chat(chat_id)
+        return await add_served_chat(chat_id)
     out = start_pannel()
     await message.reply_text(f"✨ Hello {message.from_user.mention}, i'm a Stream bot.\n\n💭 Make me admin in your group so I can play music, otherwise you can't use my service.", reply_markup=InlineKeyboardMarkup(out[1]))
     return
@@ -91,7 +91,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"✨ Welcome {rpk} !\n\n💭 [stream](https://t.me/vcgstream_bot) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
+            text=f"✨ Welcome {rpk} !\n\n💭 [rebels](https://t.me/RebelsMusic_Bot) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id,
