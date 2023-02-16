@@ -5,7 +5,7 @@ from os import getenv
 from dotenv import load_dotenv
 
 load_dotenv()
-SESSION_NAME = getenv("SESSION_NAME")
+SESSION_NAME = getenv("SESSION_NAME", "BQBfLYOF7h0ac7MHEJG2Bfjbd6bTXVMMoRpEn-gKIIxcAx-ggLdRwuGxVLdHAH9FXFsg7bVsq_HNShpou-OwiCJoUQCHJpv-ubhgPWKvZS_bwh9_CvbST5fVmivd_VFMi_S6wAptJFQPH2khE17lKr3DenCe1ohikXEmxAJiw_uH9Uk7WSJzQ8VxcHCGGog0tX8wu2W7ENBHEJEj_gD7N7QGuiAVgzHEw1IUh5xkRDVtOLEK9bsnMxGP_D4x6Ad9_oCx4vZAe7JJWotNC8iq2sC4XVlaf6E856_7HTK5jGPtbYwNRwWHju_nsFL4W-k6LHXU-S1gM5duw70ytfYDPv2SbZ0THwA")
 BOT_TOKEN = getenv("BOT_TOKEN")
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
