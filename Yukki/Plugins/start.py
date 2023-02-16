@@ -28,7 +28,7 @@ def start_pannel():
                 InlineKeyboardButton(text="💭 Group", url="https://t.me/amangsupportgrup")
             ],
     ]
-    return "✨  **Welcome to veez music mega bot.**", buttons
+    return "✨  **Welcome to mixue music bot.**", buttons
 
 pstart_markup=InlineKeyboardMarkup(
             [
@@ -57,7 +57,7 @@ welcome_captcha_group = 2
 async def welcome(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"❌ **not in allowed chat**\n\nmixue is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)
     for member in message.new_chat_members:
         try:
@@ -78,7 +78,7 @@ async def welcome(_, message: Message):
 async def start(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"❌ **not in allowed chat**\n\nmixue is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)
     out = start_pannel()
     await message.reply_text(f"✨ Hello {message.from_user.mention}, i'm a Mixue Music bot.\n\n💭 Make me admin in your group so I can play music, otherwise you can't use my service.", reply_markup=InlineKeyboardMarkup(out[1]))
@@ -91,7 +91,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"✨ Welcome {rpk} !\n\n💭 [Veez Mega](https://t.me/VeezMegaBot) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
+            text=f"✨ Welcome {rpk} !\n\n💭 [MixueTapiBot](https://t.me/mixuetapibot) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id,
