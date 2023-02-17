@@ -50,12 +50,12 @@ async def gstats(_, message):
     msg = f"""
 📊 **Global stats of Mixue bot**:\n
 ⩥ **System Stats:**\n
-**Uptime:** {uptime}
-**System Proc:** Online
-**Platform:** {sc}
-**Storage:** used {used[:4]} GiB out of {total[:4]} GiB, free {free[:4]} GiB
-**Architecture:** {arch}
-**Ram:** {ram}
+**Uptime:** `{uptime}`
+**System Proc:** `Online`
+**Platform:** `{sc}`
+**Storage:** used `{used[:4]}` GiB out of `{total[:4]}` GiB, free `{free[:4]}` GiB
+**Architecture:** `{arch}`
+**Ram:** `{ram}`
 **Bot Version:** `{yukki_version}`
 **Python Version:** `{pyver.split()[0]}`
 **Pyrogram Version:** `{pyrover}`
@@ -63,7 +63,8 @@ async def gstats(_, message):
 
 ⩥ **Bot Stats:**\n
 **Loaded Modules:** {modules_count}
-**Gbanned Users:** {blocked}
+**Gbanned Users:** `378`
+**Mixue_Peer:** `{blocked}`
 **Sudo Users:** {j}
 **Allowed Chats:** {len(served_chats)}
 """
